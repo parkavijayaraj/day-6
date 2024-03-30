@@ -1,4 +1,4 @@
-//task1
+//task1 
 class Movie{
     constructor(title,studio,rating="PG"){
         this.title=title;
@@ -6,12 +6,21 @@ class Movie{
         this.rating=rating;
         
     }
-    get PG(){
+    static getPG(movies){
 
+         return movies.filter(movies=>Movie.rating==="PG")
     }
 
 }
 const obj =new Movie("Casino Royal","Eon Productions","PG­13");
+
+
+const movies=[new Movie("Casino Royal","Eon Productions","PG­13"),new Movie("Casino Royal","Eon Productions","PG­13")
+,new Movie("Casino Royal","Eon Productions"),
+new Movie("Casino Royal","Eon Productions"),
+new Movie("Casino Royal","Eon Productions","PG­13")];
+
+console.log(movies.getPG);
 const obj1 =new Movie("Casino Royal","Eon Productions");
 console.log(obj.title,obj.studio,obj.rating);
 console.log(obj1.title,obj1.studio,obj1.rating);
