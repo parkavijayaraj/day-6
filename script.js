@@ -8,19 +8,22 @@ class Movie{
     }
     static getPG(movies){
 
-         return movies.filter(movies=>Movie.rating==="PG")
+         return movies.filter(movie=>movie.rating==="PG")
     }
 
 }
 const obj =new Movie("Casino Royal","Eon Productions","PG­13");
 
 
-const movies=[new Movie("Casino Royal","Eon Productions","PG­13"),new Movie("Casino Royal","Eon Productions","PG­13")
-,new Movie("Casino Royal","Eon Productions"),
+const movies=[
+    new Movie("Casino Royal","Eon Productions","PG­13"),
+    new Movie("Casino Royal","Eon Productions","PG­13"),
 new Movie("Casino Royal","Eon Productions"),
-new Movie("Casino Royal","Eon Productions","PG­13")];
+new Movie("Casino Royal","Eon Productions"),
+new Movie("Casino Royal","Eon Productions","PG­13")
+];
 
-console.log(movies.getPG);
+console.log(Movie.getPG(movies));
 const obj1 =new Movie("Casino Royal","Eon Productions");
 console.log(obj.title,obj.studio,obj.rating);
 console.log(obj1.title,obj1.studio,obj1.rating);
